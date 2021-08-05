@@ -1,0 +1,23 @@
+{
+  "name": "fem-sunnyside",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Olkens/fem-sunnyside.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Olkens/fem-sunnyside/issues"
+  },
+  "homepage": "https://github.com/Olkens/fem-sunnyside#readme",
+  "devDependencies": {
+    "sass": "^1.37.5"
+  }
+}
