@@ -1,9 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@400;700;900&display=swap");
-body {
-  padding: 0;
-  margin: 0;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
   font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+body {
   font-family: "Fraunces", serif;
+  max-width: 1440px;
+  margin: auto;
 }
 
 header {
@@ -64,37 +76,47 @@ header .header-section img {
   margin-top: 3rem;
 }
 
-.first-section {
+.sections-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.all-sections {
   display: flex;
   align-items: center;
 }
-.first-section div {
+.all-sections div {
   padding: 0 7rem;
   color: #25564b;
 }
-.first-section div h1 {
+.all-sections div h1 {
   font-weight: 900;
   font-size: 3rem;
 }
-.first-section div p {
+.all-sections div p {
   font-family: "Barlow", sans-serif;
   font-weight: normal;
   padding: 3rem 0;
+  color: #458c7e;
 }
-.first-section div a {
+.all-sections div a {
   text-decoration: none;
   font-weight: 900;
   color: #25564b;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   font-size: 0.9rem;
-  border-bottom: 8px solid #fad400;
   border-radius: 10px;
 }
-.first-section div border-bottom {
-  height: 8px;
-  width: 30px;
-  background-color: #fad400;
+
+.first-section a {
+  border-bottom: 8px solid #fad400;
+}
+
+.second-section a {
+  border-bottom: 8px solid #fe7867;
 }
 
 /*# sourceMappingURL=main.css.map */

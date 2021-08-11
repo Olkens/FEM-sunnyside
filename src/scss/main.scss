@@ -8,11 +8,23 @@ $darkCyan: hsl(167, 40%, 24%);
 $darkBlue: hsl(198, 62%, 26%);
 $darkModerateCyan: hsl(168, 34%, 41%);
 
-body {
-  padding: 0;
-  margin: 0;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
   font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+body {
   font-family: "Fraunces", serif;
+  max-width: 1440px;
+  margin: auto;
 }
 
 header {
@@ -74,8 +86,13 @@ header {
     }
   }
 }
-
-.first-section {
+.sections-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.all-sections {
   display: flex;
   align-items: center;
   div {
@@ -89,6 +106,7 @@ header {
       font-family: "Barlow", sans-serif;
       font-weight: normal;
       padding: 3rem 0;
+      color: $darkModerateCyan;
     }
     a {
       text-decoration: none;
@@ -97,13 +115,17 @@ header {
       text-transform: uppercase;
       letter-spacing: 0.1rem;
       font-size: 0.9rem;
-      border-bottom: 8px solid $yellow;
       border-radius: 10px;
     }
-    border-bottom {
-      height: 8px;
-      width: 30px;
-      background-color: $yellow;
-    }
+  }
+}
+.first-section {
+  a {
+    border-bottom: 8px solid $yellow;
+  }
+}
+.second-section {
+  a {
+    border-bottom: 8px solid $softRed;
   }
 }
