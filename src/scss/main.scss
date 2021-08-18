@@ -187,3 +187,26 @@ header {
     }
   }
 }
+
+.testimonials_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .testimonials {
+    display: flex;
+    align-items: space-between;
+    .testimonial {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 33%;
+      padding: 0 1rem;
+      img{
+        width: 20%;
+        height: auto;
+        border-radius:50%;
+      }
+      
+    }
+  }
+}
