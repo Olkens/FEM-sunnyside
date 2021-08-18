@@ -26,21 +26,33 @@ body {
   max-width: 1440px;
   margin: auto;
 }
+main {
+  display: flex;
+  flex-direction: column;
+}
 
 header {
-  background-image: url(../../images/desktop/image-header.jpg);
-  height: 100vh;
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  background-size: 100%;
+  .header-background {
+    max-width: 1440px;
+    position: relative;
+    margin-bottom: -5px;
+  }
+  // background-image: url(../../images/desktop/image-header.jpg);
+  // height: 82vh;
+  // background-position: center top;
+  // background-repeat: no-repeat;
+  // background-size: 100%;
   .main-nav {
+    position: absolute;
+    top: 0;
+    width: 1440px;
     display: flex;
     justify-content: space-between;
     padding: 2rem 3rem;
     color: #fff;
     align-items: center;
     .logo {
-      height: 100%;
+      height: auto;
       width: 250px;
     }
     nav {
@@ -68,6 +80,10 @@ header {
     }
   }
   .header-section {
+    position: absolute;
+    top: 25%;
+    text-align: center;
+    width: 1440px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -81,8 +97,12 @@ header {
       letter-spacing: 0.8rem;
       text-transform: uppercase;
     }
-    img {
+    .header_arrow {
       margin-top: 3rem;
+      transition: 0.5s ease-in-out;
+      &:hover {
+        transform: translate(0px, 25px);
+      }
     }
   }
 }
@@ -120,6 +140,7 @@ header {
   }
 }
 .first-section {
+  top: 214px;
   a {
     border-bottom: 8px solid $yellow;
   }
@@ -127,5 +148,42 @@ header {
 .second-section {
   a {
     border-bottom: 8px solid $softRed;
+  }
+}
+.third-section {
+  max-width: 1440px;
+
+  .third-section_graphic-design {
+    background-image: url(../../images/desktop/image-graphic-design.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 50vw;
+    height: 600px;
+  }
+  .third-section_photography {
+    background-image: url(../../images/desktop/image-photography.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 50vw;
+    height: 600px;
+  }
+
+  .third-section_graphic-design,
+  .third-section_photography {
+    h1,
+    p {
+      position: relative;
+      top: 60%;
+      text-align: center;
+    }
+    p {
+      padding: 1rem 3rem;
+      font-weight: bold;
+    }
+    h1 {
+      font-size: 1.8rem;
+    }
   }
 }

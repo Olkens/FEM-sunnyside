@@ -18,14 +18,20 @@ body {
   margin: auto;
 }
 
-header {
-  background-image: url(../../images/desktop/image-header.jpg);
-  height: 100vh;
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  background-size: 100%;
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+header .header-background {
+  max-width: 1440px;
+  position: relative;
+  margin-bottom: -5px;
 }
 header .main-nav {
+  position: absolute;
+  top: 0;
+  width: 1440px;
   display: flex;
   justify-content: space-between;
   padding: 2rem 3rem;
@@ -33,7 +39,7 @@ header .main-nav {
   align-items: center;
 }
 header .main-nav .logo {
-  height: 100%;
+  height: auto;
   width: 250px;
 }
 header .main-nav nav ul {
@@ -58,6 +64,10 @@ header .main-nav nav li:last-child {
   margin-left: 4rem;
 }
 header .header-section {
+  position: absolute;
+  top: 25%;
+  text-align: center;
+  width: 1440px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -72,8 +82,12 @@ header .header-section h1 {
   letter-spacing: 0.8rem;
   text-transform: uppercase;
 }
-header .header-section img {
+header .header-section .header_arrow {
   margin-top: 3rem;
+  transition: 0.5s ease-in-out;
+}
+header .header-section .header_arrow:hover {
+  transform: translate(0px, 25px);
 }
 
 .sections-container {
@@ -111,12 +125,52 @@ header .header-section img {
   border-radius: 10px;
 }
 
+.first-section {
+  top: 214px;
+}
 .first-section a {
   border-bottom: 8px solid #fad400;
 }
 
 .second-section a {
   border-bottom: 8px solid #fe7867;
+}
+
+.third-section {
+  max-width: 1440px;
+}
+.third-section .third-section_graphic-design {
+  background-image: url(../../images/desktop/image-graphic-design.jpg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 50vw;
+  height: 600px;
+}
+.third-section .third-section_photography {
+  background-image: url(../../images/desktop/image-photography.jpg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 50vw;
+  height: 600px;
+}
+.third-section .third-section_graphic-design h1,
+.third-section .third-section_graphic-design p,
+.third-section .third-section_photography h1,
+.third-section .third-section_photography p {
+  position: relative;
+  top: 60%;
+  text-align: center;
+}
+.third-section .third-section_graphic-design p,
+.third-section .third-section_photography p {
+  padding: 1rem 3rem;
+  font-weight: bold;
+}
+.third-section .third-section_graphic-design h1,
+.third-section .third-section_photography h1 {
+  font-size: 1.8rem;
 }
 
 /*# sourceMappingURL=main.css.map */
